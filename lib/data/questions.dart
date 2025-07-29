@@ -7,12 +7,13 @@ class QuestionsData {
       Question(
         question: "کدام یک از موارد زیر جزء منابع مالی شرکت محسوب می‌شود؟",
         options: [
-          "فروش محصولات",
+
           "خرید مواد اولیه",
           "پرداخت حقوق کارکنان",
+          "فروش محصولات",
           "پرداخت مالیات",
         ],
-        correctAnswer: 0,
+        correctAnswer: 2,
         difficulty: Difficulty.easy,
         explanation:
             "فروش محصولات جزء منابع مالی شرکت است که باعث افزایش نقدینگی می‌شود.",
@@ -20,12 +21,13 @@ class QuestionsData {
       Question(
         question: "نسبت جاری چیست؟",
         options: [
-          "نسبت دارایی‌های جاری به بدهی‌های جاری",
+
           "نسبت سود به فروش",
           "نسبت بدهی به دارایی",
           "نسبت سرمایه به فروش",
+        "نسبت دارایی‌های جاری به بدهی‌های جاری"
         ],
-        correctAnswer: 0,
+        correctAnswer: 3,
         difficulty: Difficulty.easy,
         explanation:
             "نسبت جاری نشان‌دهنده توانایی شرکت در پرداخت بدهی‌های کوتاه‌مدت است.",
@@ -42,11 +44,12 @@ class QuestionsData {
         question: "سود خالص چیست؟",
         options: [
           "فروش منهای هزینه‌های متغیر",
-          "سود ناخالص منهای هزینه‌های عملیاتی",
           "کل درآمد منهای کل هزینه‌ها",
+          "سود ناخالص منهای هزینه‌های عملیاتی",
+
           "فروش منهای بهای تمام شده",
         ],
-        correctAnswer: 2,
+        correctAnswer: 1,
         difficulty: Difficulty.easy,
         explanation: "سود خالص برابر است با کل درآمد منهای کل هزینه‌ها.",
       ),
@@ -54,11 +57,12 @@ class QuestionsData {
         question: "کدام یک جزء بدهی‌های جاری است؟",
         options: [
           "وام بلندمدت",
-          "حساب‌های پرداختنی",
+
           "سهام عادی",
           "سود انباشته",
+          "حساب‌های پرداختنی",
         ],
-        correctAnswer: 1,
+        correctAnswer: 3,
         difficulty: Difficulty.easy,
         explanation:
             "حساب‌های پرداختنی جزء بدهی‌های جاری است که باید در مدت کوتاه پرداخت شود.",
@@ -79,20 +83,21 @@ class QuestionsData {
       Question(
         question: "سود ناخالص چیست؟",
         options: [
-          "فروش منهای بهای تمام شده",
+
           "سود خالص منهای مالیات",
+          "فروش منهای بهای تمام شده",
           "کل درآمد منهای کل هزینه‌ها",
           "سود عملیاتی منهای بهره",
         ],
-        correctAnswer: 0,
+        correctAnswer: 1,
         difficulty: Difficulty.easy,
         explanation:
             "سود ناخالص برابر است با فروش منهای بهای تمام شده کالای فروش رفته.",
       ),
       Question(
         question: "کدام یک جزء دارایی‌های جاری است؟",
-        options: ["ساختمان", "موجودی نقدی", "ماشین‌آلات", "زمین"],
-        correctAnswer: 1,
+        options: ["ساختمان", "ماشین‌آلات", "زمین","موجودی نقدی"],
+        correctAnswer: 3,
         difficulty: Difficulty.easy,
         explanation:
             "موجودی نقدی جزء دارایی‌های جاری است که در مدت کوتاه قابل تبدیل به نقد است.",
@@ -100,12 +105,13 @@ class QuestionsData {
       Question(
         question: "نسبت سودآوری چیست؟",
         options: [
-          "نسبت سود خالص به فروش",
+
           "نسبت دارایی‌ها به بدهی‌ها",
           "نسبت سرمایه به فروش",
+          "نسبت سود خالص به فروش",
           "نسبت بدهی به دارایی",
         ],
-        correctAnswer: 0,
+        correctAnswer: 2,
         difficulty: Difficulty.easy,
         explanation:
             "نسبت سودآوری نشان‌دهنده میزان سودآوری شرکت نسبت به فروش است.",
@@ -126,12 +132,13 @@ class QuestionsData {
       Question(
         question: "نسبت گردش دارایی چیست؟",
         options: [
-          "نسبت فروش به کل دارایی‌ها",
+
           "نسبت سود به دارایی‌ها",
           "نسبت بدهی به دارایی‌ها",
           "نسبت سرمایه به دارایی‌ها",
+          "نسبت فروش به کل دارایی‌ها",
         ],
-        correctAnswer: 0,
+        correctAnswer: 3,
         difficulty: Difficulty.easy,
         explanation:
             "نسبت گردش دارایی نشان‌دهنده کارایی استفاده از دارایی‌ها است.",
@@ -152,12 +159,13 @@ class QuestionsData {
       Question(
         question: "نسبت آنی چیست؟",
         options: [
-          "نسبت دارایی‌های جاری منهای موجودی به بدهی‌های جاری",
+
           "نسبت سود به فروش",
+          "نسبت دارایی‌های جاری منهای موجودی به بدهی‌های جاری",
           "نسبت بدهی به دارایی",
           "نسبت سرمایه به فروش",
         ],
-        correctAnswer: 0,
+        correctAnswer: 1,
         difficulty: Difficulty.easy,
         explanation:
             "نسبت آنی نشان‌دهنده توانایی شرکت در پرداخت بدهی‌های کوتاه‌مدت بدون فروش موجودی است.",
@@ -165,12 +173,13 @@ class QuestionsData {
       Question(
         question: "سود قبل از مالیات چیست؟",
         options: [
-          "سود عملیاتی منهای بهره",
+
           "سود خالص منهای مالیات",
           "سود ناخالص منهای هزینه‌های عملیاتی",
           "فروش منهای بهای تمام شده",
+          "سود عملیاتی منهای بهره",
         ],
-        correctAnswer: 0,
+        correctAnswer: 3,
         difficulty: Difficulty.easy,
         explanation:
             "سود قبل از مالیات برابر است با سود عملیاتی منهای هزینه‌های مالی.",
@@ -178,12 +187,13 @@ class QuestionsData {
       Question(
         question: "نسبت بازده سرمایه‌گذاری چیست؟",
         options: [
-          "نسبت سود خالص به کل دارایی‌ها",
+
           "نسبت فروش به دارایی‌ها",
+          "نسبت سود خالص به کل دارایی‌ها",
           "نسبت بدهی به دارایی‌ها",
           "نسبت سرمایه به دارایی‌ها",
         ],
-        correctAnswer: 0,
+        correctAnswer: 1,
         difficulty: Difficulty.easy,
         explanation:
             "نسبت بازده سرمایه‌گذاری نشان‌دهنده بازدهی کل سرمایه‌گذاری است.",
@@ -219,12 +229,13 @@ class QuestionsData {
       Question(
         question: "نسبت بدهی به حقوق صاحبان سهام چه چیزی را نشان می‌دهد؟",
         options: [
-          "نسبت استفاده از اهرم مالی",
+
           "نسبت سودآوری",
           "نسبت نقدینگی",
           "نسبت کارایی",
+          "نسبت استفاده از اهرم مالی",
         ],
-        correctAnswer: 0,
+        correctAnswer: 3,
         difficulty: Difficulty.medium,
         explanation:
             "این نسبت نشان‌دهنده میزان استفاده شرکت از بدهی نسبت به سرمایه‌گذاری سهامداران است.",
@@ -233,11 +244,12 @@ class QuestionsData {
         question: "دوره وصول مطالبات چیست؟",
         options: [
           "مدت زمان پرداخت بدهی‌ها",
-          "مدت زمان دریافت مطالبات از مشتریان",
+
           "مدت زمان نگهداری موجودی",
+          "مدت زمان دریافت مطالبات از مشتریان",
           "مدت زمان تولید محصول",
         ],
-        correctAnswer: 1,
+        correctAnswer: 2,
         difficulty: Difficulty.medium,
         explanation:
             "دوره وصول مطالبات نشان‌دهنده مدت زمان متوسط دریافت مطالبات از مشتریان است.",
@@ -246,11 +258,13 @@ class QuestionsData {
         question: "کدام یک از روش‌های ارزیابی سرمایه‌گذاری است؟",
         options: [
           "نسبت جاری",
-          "نرخ بازده داخلی (IRR)",
+
           "نسبت بدهی",
+
           "نسبت سودآوری",
+          "نرخ بازده داخلی (IRR)",
         ],
-        correctAnswer: 1,
+        correctAnswer: 3,
         difficulty: Difficulty.medium,
         explanation:
             "IRR یکی از روش‌های ارزیابی سرمایه‌گذاری است که نرخ بازدهی را محاسبه می‌کند.",
@@ -284,24 +298,26 @@ class QuestionsData {
       Question(
         question: "نسبت بازده حقوق صاحبان سهام (ROE) چیست؟",
         options: [
-          "نسبت سود خالص به حقوق صاحبان سهام",
+
           "نسبت سود به فروش",
           "نسبت دارایی‌ها به حقوق صاحبان سهام",
+          "نسبت سود خالص به حقوق صاحبان سهام",
           "نسبت بدهی به حقوق صاحبان سهام",
         ],
-        correctAnswer: 0,
+        correctAnswer: 2,
         difficulty: Difficulty.medium,
         explanation: "ROE نشان‌دهنده بازدهی سرمایه‌گذاری سهامداران است.",
       ),
       Question(
         question: "دوره گردش موجودی چیست؟",
         options: [
-          "مدت زمان نگهداری موجودی",
+
           "مدت زمان تولید محصول",
+          "مدت زمان نگهداری موجودی",
           "مدت زمان فروش موجودی",
           "مدت زمان خرید موجودی",
         ],
-        correctAnswer: 0,
+        correctAnswer: 1,
         difficulty: Difficulty.medium,
         explanation:
             "دوره گردش موجودی نشان‌دهنده مدت زمان متوسط نگهداری موجودی است.",
@@ -309,12 +325,13 @@ class QuestionsData {
       Question(
         question: "نسبت پوشش بهره چیست؟",
         options: [
-          "نسبت سود قبل از مالیات و بهره به هزینه بهره",
+
           "نسبت سود خالص به هزینه بهره",
           "نسبت دارایی‌ها به هزینه بهره",
+          "نسبت سود قبل از مالیات و بهره به هزینه بهره",
           "نسبت فروش به هزینه بهره",
         ],
-        correctAnswer: 0,
+        correctAnswer: 2,
         difficulty: Difficulty.medium,
         explanation:
             "نسبت پوشش بهره نشان‌دهنده توانایی شرکت در پرداخت هزینه‌های مالی است.",
@@ -335,24 +352,26 @@ class QuestionsData {
       Question(
         question: "نسبت بازده دارایی‌ها (ROA) چیست؟",
         options: [
-          "نسبت سود خالص به کل دارایی‌ها",
+
           "نسبت سود به فروش",
+          "نسبت سود خالص به کل دارایی‌ها",
           "نسبت دارایی‌ها به بدهی‌ها",
           "نسبت سرمایه به دارایی‌ها",
         ],
-        correctAnswer: 0,
+        correctAnswer: 1,
         difficulty: Difficulty.medium,
         explanation: "ROA نشان‌دهنده بازدهی کل دارایی‌های شرکت است.",
       ),
       Question(
         question: "نرخ تنزیل چیست؟",
         options: [
-          "نرخ بازده مورد انتظار سرمایه‌گذاری",
+
           "نرخ بهره بانکی",
           "نرخ تورم",
+          "نرخ بازده مورد انتظار سرمایه‌گذاری",
           "نرخ ارز",
         ],
-        correctAnswer: 0,
+        correctAnswer: 2,
         difficulty: Difficulty.medium,
         explanation:
             "نرخ تنزیل نرخ بازده مورد انتظار برای تنزیل جریان‌های نقدی آینده است.",
@@ -360,12 +379,13 @@ class QuestionsData {
       Question(
         question: "نسبت Q توبین چیست؟",
         options: [
-          "نسبت ارزش بازار به ارزش دفتری دارایی‌ها",
+
           "نسبت سود به دارایی‌ها",
           "نسبت بدهی به دارایی‌ها",
           "نسبت سرمایه به دارایی‌ها",
+          "نسبت ارزش بازار به ارزش دفتری دارایی‌ها",
         ],
-        correctAnswer: 0,
+        correctAnswer: 3,
         difficulty: Difficulty.medium,
         explanation:
             "نسبت Q توبین نشان‌دهنده نسبت ارزش بازار به ارزش دفتری دارایی‌ها است.",
@@ -386,12 +406,13 @@ class QuestionsData {
       Question(
         question: "نسبت بازده سرمایه‌گذاری (ROIC) چیست؟",
         options: [
-          "نسبت سود عملیاتی به سرمایه‌گذاری",
+
           "نسبت سود خالص به دارایی‌ها",
+          "نسبت سود عملیاتی به سرمایه‌گذاری",
           "نسبت فروش به سرمایه‌گذاری",
           "نسبت بدهی به سرمایه‌گذاری",
         ],
-        correctAnswer: 0,
+        correctAnswer: 1,
         difficulty: Difficulty.medium,
         explanation:
             "ROIC نشان‌دهنده بازدهی سرمایه‌گذاری در دارایی‌های عملیاتی است.",
@@ -440,12 +461,13 @@ class QuestionsData {
       Question(
         question: "نسبت شارپ چیست؟",
         options: [
-          "نسبت ریسک به بازده",
+
           "نسبت سود به فروش",
+          "نسبت ریسک به بازده",
           "نسبت بدهی به دارایی",
           "نسبت نقدینگی",
         ],
-        correctAnswer: 0,
+        correctAnswer: 1,
         difficulty: Difficulty.hard,
         explanation:
             "نسبت شارپ نشان‌دهنده بازده اضافی به ازای هر واحد ریسک است.",
@@ -478,24 +500,26 @@ class QuestionsData {
       Question(
         question: "مدل قیمت‌گذاری آربیتراژ (APT) چیست؟",
         options: [
-          "مدل چندعاملی قیمت‌گذاری",
+
           "مدل تک‌عاملی قیمت‌گذاری",
           "مدل ارزش فعلی",
+          "مدل چندعاملی قیمت‌گذاری",
           "مدل تنزیل سود تقسیمی",
         ],
-        correctAnswer: 0,
+        correctAnswer: 2,
         difficulty: Difficulty.hard,
         explanation: "APT مدل چندعاملی برای قیمت‌گذاری دارایی‌ها است.",
       ),
       Question(
         question: "نسبت اطلاعات چیست؟",
         options: [
-          "نسبت بازده اضافی به انحراف معیار",
+
           "نسبت سود به ریسک",
           "نسبت بازده به نوسان",
+          "نسبت بازده اضافی به انحراف معیار",
           "نسبت سرمایه به ریسک",
         ],
-        correctAnswer: 0,
+        correctAnswer: 2,
         difficulty: Difficulty.hard,
         explanation:
             "نسبت اطلاعات نشان‌دهنده بازده اضافی به ازای هر واحد ریسک فعال است.",
@@ -503,12 +527,13 @@ class QuestionsData {
       Question(
         question: "مدل بلک-شولز برای چه چیزی استفاده می‌شود؟",
         options: [
-          "قیمت‌گذاری اختیار معامله",
+
           "قیمت‌گذاری سهام",
           "قیمت‌گذاری اوراق قرضه",
+          "قیمت‌گذاری اختیار معامله",
           "قیمت‌گذاری ارز",
         ],
-        correctAnswer: 0,
+        correctAnswer: 2,
         difficulty: Difficulty.hard,
         explanation:
             "مدل بلک-شولز برای قیمت‌گذاری اختیار معامله استفاده می‌شود.",
@@ -516,12 +541,13 @@ class QuestionsData {
       Question(
         question: "نسبت ترینور چیست؟",
         options: [
-          "نسبت بازده اضافی به بتا",
+
           "نسبت سود به ریسک",
           "نسبت بازده به نوسان",
+          "نسبت بازده اضافی به بتا",
           "نسبت سرمایه به ریسک",
         ],
-        correctAnswer: 0,
+        correctAnswer: 2,
         difficulty: Difficulty.hard,
         explanation:
             "نسبت ترینور نشان‌دهنده بازده اضافی به ازای هر واحد ریسک سیستماتیک است.",
@@ -541,12 +567,13 @@ class QuestionsData {
       Question(
         question: "نسبت کالمرز چیست؟",
         options: [
-          "نسبت بازده اضافی به انحراف معیار مطلق",
+
           "نسبت سود به ریسک",
           "نسبت بازده به نوسان",
           "نسبت سرمایه به ریسک",
+          "نسبت بازده اضافی به انحراف معیار مطلق",
         ],
-        correctAnswer: 0,
+        correctAnswer: 3,
         difficulty: Difficulty.hard,
         explanation:
             "نسبت کالمرز نشان‌دهنده بازده اضافی به ازای هر واحد انحراف معیار مطلق است.",
@@ -555,12 +582,13 @@ class QuestionsData {
         question:
             "مدل قیمت‌گذاری دارایی‌های سرمایه‌ای تعدیل شده (CAPM تعدیل شده) چیست؟",
         options: [
-          "CAPM با در نظر گرفتن ریسک‌های اضافی",
+
           "CAPM ساده",
+          "CAPM با در نظر گرفتن ریسک‌های اضافی",
           "مدل ارزش فعلی",
           "مدل تنزیل سود تقسیمی",
         ],
-        correctAnswer: 0,
+        correctAnswer: 1,
         difficulty: Difficulty.hard,
         explanation:
             "CAPM تعدیل شده شامل ریسک‌های اضافی مانند ریسک نقدینگی است.",
@@ -568,12 +596,13 @@ class QuestionsData {
       Question(
         question: "نسبت سورتینو چیست؟",
         options: [
-          "نسبت بازده اضافی به انحراف معیار نزولی",
+
           "نسبت سود به ریسک",
           "نسبت بازده به نوسان",
           "نسبت سرمایه به ریسک",
+          "نسبت بازده اضافی به انحراف معیار نزولی",
         ],
-        correctAnswer: 0,
+        correctAnswer: 3,
         difficulty: Difficulty.hard,
         explanation:
             "نسبت سورتینو نشان‌دهنده بازده اضافی به ازای هر واحد ریسک نزولی است.",
@@ -593,12 +622,13 @@ class QuestionsData {
       Question(
         question: "نسبت اومگا چیست؟",
         options: [
-          "نسبت احتمال سود به احتمال زیان",
+
           "نسبت سود به ریسک",
           "نسبت بازده به نوسان",
+          "نسبت احتمال سود به احتمال زیان",
           "نسبت سرمایه به ریسک",
         ],
-        correctAnswer: 0,
+        correctAnswer: 2,
         difficulty: Difficulty.hard,
         explanation:
             "نسبت اومگا نشان‌دهنده نسبت احتمال سود به احتمال زیان است.",

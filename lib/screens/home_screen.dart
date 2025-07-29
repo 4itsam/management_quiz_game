@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:management_game/gen/assets.gen.dart';
+import 'package:management_game/gen/fonts.gen.dart';
 import '../models/question.dart';
 import 'game_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -179,7 +179,10 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ),
                             const SizedBox(height: 8),
-                            const Text("توسعه: داکتو", style: TextStyle(fontSize: 15)),
+                            const Text(
+                              "توسعه: داکتو",
+                              style: TextStyle(fontSize: 15),
+                            ),
                           ],
                         ),
                         actions: [
@@ -204,12 +207,102 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                     child: Icon(Icons.code_rounded),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // دکمه مالکیت فکری و منابع
+          Positioned(
+            bottom: 16,
+            right: 16,
+            child: Builder(
+              builder: (context) => Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(24),
+                  onTap: () {
+                    Scaffold.of(context).showBottomSheet(
+                      constraints: BoxConstraints(maxHeight: 450),
+                      backgroundColor: const Color.fromARGB(255, 12, 33, 100),
+                      clipBehavior: Clip.antiAlias,
+                      enableDrag: true,
+
+                      showDragHandle: true,
+
+                      sheetAnimationStyle: AnimationStyle(
+                        curve: Curves.easeIn,
+                        reverseCurve: Curves.easeOut,
+                      ),
+                      (context) => SizedBox(
+                        height: double.infinity,
+                        width: double.infinity,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              'مالکیت محتوای بازی شاخص',
+                              style: TextStyle(
+                                fontFamily: FontFamily.iRANYekan,
+                                color: Colors.white,
+                                fontSize: 16,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(12),
+                              child: Text(
+                                textAlign: TextAlign.center,
+                                '''تمامی محتوای موجود در بازی «شاخص»، شامل پرسش‌ها، پاسخ‌ها، طراحی مراحل، ساختار کلی بازی و متون آموزشی،
+به‌صورت اختصاصی توسط تیم توسعه‌دهنده تولید شده و مالکیت فکری آن متعلق به سازنده این اپلیکیشن است.
+هیچ‌یک از بخش‌های این بازی از منابع عمومی یا محصولات مشابه کپی‌برداری نشده و تمامی مطالب
+با تمرکز بر مفاهیم مدیریتی و به‌صورت بومی‌سازی‌شده طراحی و تدوین شده‌اند.
+استفاده، بازنشر یا کپی‌برداری از محتوای این اپلیکیشن بدون کسب مجوز رسمی،
+مغایر با قوانین مالکیت فکری جمهوری اسلامی ایران بوده و پیگرد قانونی خواهد داشت.''',
+                                style: TextStyle(
+                                  fontFamily: FontFamily.iRANYekan,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                            ),
+                            TextButton.icon(
+                              style: TextButton.styleFrom(
+                                backgroundColor: Colors.white60,
+                              ),
+                              onPressed: () => Navigator.pop(context),
+                              label: Text("بازگشت"),
+                              icon: Icon(Icons.arrow_back_ios_new_rounded),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(180, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(24),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color.fromARGB(
+                            255,
+                            26,
+                            26,
+                            26,
+                          ).withOpacity(0.08),
+                          blurRadius: 6,
+                        ),
+                      ],
+                    ),
+                    child: Icon(
+                      Icons.warning_rounded,
+                      color: const Color.fromARGB(255, 44, 44, 44),
                     ),
                   ),
                 ),
               ),
             ),
-
+          ),
         ],
       ),
     );
