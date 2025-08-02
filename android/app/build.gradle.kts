@@ -34,7 +34,7 @@ android {
         applicationId = "com.shakhes.sh"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
-        versionCode = 1004
+        versionCode = 1000
         versionName = flutter.versionName
     }
 

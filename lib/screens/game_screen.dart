@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
+import 'dart:async';
 import '../models/question.dart';
 import '../data/questions.dart';
 import 'result_screen.dart';
@@ -22,6 +23,11 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _animation;
 
+  // Timer variables
+  Timer? _timer;
+  int _timeLeft = 0;
+  int _totalTime = 0;
+
   @override
   void initState() {
     super.initState();
@@ -36,16 +42,72 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
       CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
     );
     _animationController.forward();
+
+    // Initialize timer based on difficulty
+    _initializeTimer();
+  }
+
+  void _initializeTimer() {
+    // Set time based on difficulty
+    switch (widget.difficulty) {
+      case Difficulty.easy:
+        _totalTime = 10;
+        break;
+      case Difficulty.medium:
+        _totalTime = 15;
+        break;
+      case Difficulty.hard:
+        _totalTime = 20;
+        break;
+    }
+    _timeLeft = _totalTime;
+    _startTimer();
+  }
+
+  void _startTimer() {
+    _timer?.cancel();
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (mounted) {
+        setState(() {
+          _timeLeft--;
+        });
+
+        if (_timeLeft <= 0) {
+          timer.cancel();
+          _timeUp();
+        }
+      }
+    });
+  }
+
+  void _timeUp() {
+    if (!isAnswered) {
+      setState(() {
+        isAnswered = true;
+        // Show correct answer when time runs out
+        selectedAnswer = questions[currentQuestionIndex].correctAnswer;
+      });
+
+      Future.delayed(const Duration(seconds: 2), () {
+        if (mounted) {
+          _nextQuestion();
+        }
+      });
+    }
   }
 
   @override
   void dispose() {
+    _timer?.cancel();
     _animationController.dispose();
     super.dispose();
   }
 
   void _selectAnswer(int answerIndex) {
     if (isAnswered) return;
+
+    // Cancel timer when answer is selected
+    _timer?.cancel();
 
     setState(() {
       selectedAnswer = answerIndex;
@@ -72,6 +134,7 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
       });
       _animationController.reset();
       _animationController.forward();
+      _initializeTimer(); // Restart timer for next question
     } else {
       Navigator.pushReplacement(
         context,
@@ -105,6 +168,16 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
         return Colors.orange;
       case Difficulty.hard:
         return Colors.red;
+    }
+  }
+
+  Color _getTimerColor() {
+    if (_timeLeft > _totalTime * 0.6) {
+      return Colors.green;
+    } else if (_timeLeft > _totalTime * 0.3) {
+      return Colors.orange;
+    } else {
+      return Colors.red;
     }
   }
 
@@ -163,6 +236,42 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
                       ),
                     ),
                   ],
+                ),
+
+                const SizedBox(height: 20),
+
+                // Timer
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 8,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        blurRadius: 5,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.timer, color: _getTimerColor(), size: 20),
+                      const SizedBox(width: 8),
+                      Text(
+                        '$_timeLeft ثانیه',
+                        style: TextStyle(
+                          color: _getTimerColor(),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
 
                 const SizedBox(height: 20),

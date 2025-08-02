@@ -123,13 +123,13 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           _InfoItem(
                             icon: Icons.quiz,
-                            title: '۱۵ سوال',
+                            title: '30 سوال',
                             subtitle: 'در هر سطح',
                           ),
                           _InfoItem(
                             icon: Icons.timer,
-                            title: 'بدون محدودیت',
-                            subtitle: 'زمان',
+                            title: '10/15/20 ثانیه',
+                            subtitle: 'زمان هر سوال',
                           ),
                           _InfoItem(
                             icon: Icons.emoji_events,
